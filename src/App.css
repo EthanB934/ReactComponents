@@ -40,8 +40,16 @@
   border-radius: 20%;
   
 }
-.phone-screen {
+.phone-screen-off {
+  transition-delay: 0.5s;
   background-color: black;  
+  margin-left: 2.25px;
+  width: 90.50px;
+  height: 88.50px;
+}
+.phone-screen-on {
+  transition-delay: 0.5s;
+  background-color: green;  
   margin-left: 2.25px;
   width: 90.50px;
   height: 88.50px;
