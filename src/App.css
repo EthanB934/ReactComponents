@@ -30,7 +30,7 @@
 .App-link {
   color: #61dafb;
 }
-.phone-screen {
+.phone-top {
   transform: translate(0px, 10px);
   padding-top: 10px;
   background-color: white;
@@ -38,6 +38,13 @@
   width: 95px;
   height: 100px;
   border-radius: 20%;
+  
+}
+.phone-screen {
+  background-color: black;  
+  margin-left: 2.25px;
+  width: 90.50px;
+  height: 88.50px;
 }
 .buttons {
   background-color: silver;
@@ -48,6 +55,22 @@
   flex-wrap: wrap;
   max-width: 90px;
   justify-content: center;
+}
+.fa-solid.fa-power-off {
+  margin: 0 5px 5px 10px;
+  border-radius: 50%;
+  color: green
+}
+.fa-solid.fa-phone {
+  margin: 0 10px 5px 5px;
+  border-radius: 50%;
+  color: green
+}
+.hashtag {
+  border-radius: 50%;
+}
+.asterisk {
+  border-radius: 50%;
 }
 .button {
   border-radius: 50%;
