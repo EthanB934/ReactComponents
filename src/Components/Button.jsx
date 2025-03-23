@@ -13,11 +13,14 @@ export const Button = ({ input, inputter, numbers, power, setPower }) => {
   };
 
   const handleKeypadInput = (event) => {
-    if(power) {
+    if(power && input.length != 10) {
       inputter([...input, parseInt(event.target.id)])
     }
-    else {
+    else if(!power) {
       window.alert("Hmm...I may need to turn the phone on first...")
+    }
+    else  {
+      window.alert("This phone doesn't accept more than ten numbers")
     }
   };
 
@@ -35,13 +38,13 @@ export const Button = ({ input, inputter, numbers, power, setPower }) => {
           );
         } else if (index === 1) {
           return <button key={index} className="fa-solid fa-phone"></button>;
-        } else if (index === 9) {
+        } else if (index === 11) {
           return (
             <button key={index} className="asterisk">
               {number}
             </button>
           );
-        } else if (index === 11) {
+        } else if (index === 13) {
           return (
             <button key={index} className="hashtag">
               {number}

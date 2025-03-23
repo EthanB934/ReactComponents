@@ -43,25 +43,41 @@
 .phone-screen-off {
   transition-delay: 0.5s;
   background-color: black;
+  border: 1px solid black;
   border-radius: 15%;
-  margin-left: 2.25px;
+  margin: 0 0 0 1px;
   width: 90.50px;
   height: 88.50px;
 }
 .phone-screen-on {
+  background-color: lightgreen;  
   display: flex;
   flex-direction: row-reverse;
   align-items: end;
+  border: 1px solid black;
   transition-delay: 0.5s;
-  background-color: green;  
   border-radius: 15%;
-  margin-left: 2.25px;
   width: 90.50px;
   height: 88.50px;
+  margin: 0 0 0 1px;
 }
+
 .input-numbers {
-  margin: 0 0 6px 0;
+  margin: 0 0 5px 0;
+  color: green;
   font-size: small;
+}
+.input-numbers:nth-child(1) {
+  margin: 0 5px 5px 0;
+}
+.numbers-container {
+  transform: translate(2px, -20px);
+  border-top: 1px solid black;
+  border-bottom-right-radius: 30%;
+  border-bottom-left-radius: 30%;
+  max-width: 90.50px;
+  background-color:rgba(0, 0, 0, 0.192);
+  height: 20px;
 }
 .buttons {
   background-color: silver;
