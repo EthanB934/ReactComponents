@@ -1,26 +1,14 @@
-export const Button = ({ input, inputter, numbers, power, setPower }) => {
+export const Button = ({ handler, inputter, numbers, power, setPower }) => {
   const handlePowerOn = (event) => {
     if (!power) {
       setTimeout(() => {
         setPower(true);
-      }, 1000)
+      }, 1000);
     } else {
-    setTimeout(() => {
-      setPower(false)
+      setTimeout(() => {
+        setPower(false);
         inputter([]);
-      }, 1000)
-    }
-  };
-
-  const handleKeypadInput = (event) => {
-    if(power && input.length != 10) {
-      inputter([...input, parseInt(event.target.id)])
-    }
-    else if(!power) {
-      window.alert("Hmm...I may need to turn the phone on first...")
-    }
-    else  {
-      window.alert("This phone doesn't accept more than ten numbers")
+      }, 1000);
     }
   };
 
@@ -52,7 +40,12 @@ export const Button = ({ input, inputter, numbers, power, setPower }) => {
           );
         } else {
           return (
-            <button key={index} id={number} onClick={handleKeypadInput} className="button">
+            <button
+              key={index}
+              id={number}
+              onClick={handler}
+              className="button"
+            >
               {number}
             </button>
           );
