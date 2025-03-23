@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Screen power={isPhoneOn}/>
+        <Screen power={isPhoneOn} input={inputNumbers}/>
         <Button input={inputNumbers} inputter={setInputNumbers} numbers={numbers} power={isPhoneOn} setPower={setIsPhoneOn}/>
       </header>
         <a

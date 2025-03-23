@@ -1,4 +1,4 @@
-export const Screen = ({ power, numbers }) => {
+export const Screen = ({ power, input }) => {
   return (
     <>
       {!power ? (
@@ -6,9 +6,13 @@ export const Screen = ({ power, numbers }) => {
           <div className="phone-screen-off"></div>
         </div>
       ) : (
-          <div className="phone-top">
-            <div className="phone-screen-on"></div>
+        <div className="phone-top">
+          <div className="phone-screen-on">
+            {input.map((number) => {
+              return <p className="input-numbers">{number}</p>;
+            }).reverse()}
           </div>
+        </div>
       )}
     </>
   );

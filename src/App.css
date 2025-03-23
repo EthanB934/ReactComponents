@@ -42,17 +42,26 @@
 }
 .phone-screen-off {
   transition-delay: 0.5s;
-  background-color: black;  
+  background-color: black;
+  border-radius: 15%;
   margin-left: 2.25px;
   width: 90.50px;
   height: 88.50px;
 }
 .phone-screen-on {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: end;
   transition-delay: 0.5s;
   background-color: green;  
+  border-radius: 15%;
   margin-left: 2.25px;
   width: 90.50px;
   height: 88.50px;
+}
+.input-numbers {
+  margin: 0 0 6px 0;
+  font-size: small;
 }
 .buttons {
   background-color: silver;

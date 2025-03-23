@@ -1,14 +1,24 @@
 export const Button = ({ input, inputter, numbers, power, setPower }) => {
   const handlePowerOn = (event) => {
     if (!power) {
-      setPower(true);
+      setTimeout(() => {
+        setPower(true);
+      }, 1000)
     } else {
-      setPower(false);
+    setTimeout(() => {
+      setPower(false)
+        inputter([]);
+      }, 1000)
     }
   };
 
   const handleKeypadInput = (event) => {
-    inputter([...input, parseInt(event.target.id)])
+    if(power) {
+      inputter([...input, parseInt(event.target.id)])
+    }
+    else {
+      window.alert("Hmm...I may need to turn the phone on first...")
+    }
   };
 
   return (
