@@ -2,7 +2,6 @@ import "./App.css";
 import { React, useState } from "react";
 import { Button } from "./Components/Button";
 import { Screen } from "./Components/Screen";
-import { eventWrapper } from "@testing-library/user-event/dist/utils";
 
 function App() {
   const [isPhoneOn, setIsPhoneOn] = useState(false);
@@ -39,6 +38,7 @@ function App() {
           input={inputNumbers}
           inputter={setInputNumbers}
           numbers={numbers}
+          inputNumbers={inputNumbers}
           power={isPhoneOn}
           setPower={setIsPhoneOn}
         />
